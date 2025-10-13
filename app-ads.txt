@@ -1,4 +1,1 @@
-# app-ads.txt for Maya Mandala LLC
-# Replace YOUR-PUBLISHER-ID with your AdMob publisher ID (format: pub-XXXXXXXXXXXXXXXX)
-# Keep this file at: https://www.mayamandalallc.com/app-ads.txt
-google.com, pub-YOUR-PUBLISHER-ID, DIRECT, f08c47fec0942fa0
+google.com, pub-5242921624430695, DIRECT, f08c47fec0942fa0
