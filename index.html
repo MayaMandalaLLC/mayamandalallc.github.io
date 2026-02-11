@@ -1,34 +1,100 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Maya Mandala LLC</title>
-    <meta name="description" content="Welcome to Maya Mandala LLC."/>
-    <link rel="preload" href="/assets/logo.png" as="image"/>
-    <link rel="stylesheet" href="/assets/styles.css"/>
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo">
-        <img src="/assets/logo.png" alt="Maya Mandala logo" width="140" height="140">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maya Mandala — Home</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/mayamandala-logo.png" alt="Maya Mandala logo" onerror="this.style.display='none'">
+        <div>
+          <div class="name">Maya Mandala</div>
+          <div class="tag">Mindful essentials • Minimal • Warm</div>
+        </div>
+      </a>
+      <div class="links">
+        <a href="index.html">Introduction</a>
+        <a href="products.html">Products</a>
+        <a href="ayurveda.html">Ayurveda</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
-      <main>
-        <h1>Welcome to Maya Mandala LLC</h1>
-        <p class="lead">Craft, culture, and creativity — made simple.</p>
-        <a class="button" href="/privacy.html">Read our Privacy Policy</a>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/privacy.html">Privacy Policy</a>
-          <a href="/app-ads.txt" rel="nofollow">app-ads.txt</a>
-        </nav>
-        <footer>
-          © <span id="year"></span> Maya Mandala LLC · All rights reserved
-        </footer>
-      </main>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Quietly luxurious wellness, inspired by timeless traditions.</h1>
+      <p>
+        Maya Mandala curates simple, soulful tools and rituals for daily care — thoughtfully crafted,
+        beautifully minimal, and easy to weave into modern life.
+      </p>
+      <div class="ctaRow">
+        <a class="btn primary" href="products.html">Explore products</a>
+        <a class="btn" href="ayurveda.html">Learn Ayurveda</a>
+        <a class="btn" href="https://mayamandalastudio.etsy.com" target="_blank" rel="noopener">Shop on Etsy</a>
+        <a class="btn" href="https://www.instagram.com/shopmayamandala" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div class="card span8">
+        <h2>Our intention</h2>
+        <p>
+          To bring you grounded, beautiful essentials that feel like a pause — a moment of clarity.
+          We honor tradition while keeping the experience modern, clean, and calming.
+        </p>
+        <div class="pillRow">
+          <div class="pill">Natural materials</div>
+          <div class="pill">Minimal design</div>
+          <div class="pill">Gentle daily rituals</div>
+          <div class="pill">Gift-worthy</div>
+        </div>
+      </div>
+
+      <div class="card span4">
+        <h2>Contact</h2>
+        <p class="small">Email</p>
+        <p><a href="mailto:info@mayamandalallc.com">info@mayamandalallc.com</a></p>
+        <p><a href="mailto:mayamandalallc@gmail.com">mayamandalallc@gmail.com</a></p>
+        <p class="small" style="margin-top:10px">Links</p>
+        <p><a href="https://mayamandalastudio.etsy.com" target="_blank" rel="noopener">mayamandalastudio.etsy.com</a></p>
+        <p><a href="https://www.instagram.com/shopmayamandala" target="_blank" rel="noopener">@shopmayamandala</a></p>
+      </div>
+
+      <div class="card span6">
+        <h2>What you’ll find</h2>
+        <p>
+          Tools and accessories that support everyday self-care: tongue care, gentle massage,
+          and small touches that make rituals feel elevated.
+        </p>
+      </div>
+
+      <div class="card span6">
+        <h2>New here?</h2>
+        <p>
+          Start with the Products page, then visit Ayurveda for a simple, approachable guide.
+          If you’d like something specific stocked, tell us in Feedback.
+        </p>
+      </div>
     </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Maya Mandala LLC</div>
+      <div>
+        <a href="feedback.html">Feedback</a> ·
+        <a href="privacy.html">Privacy Policy</a> ·
+        <a href="https://mayamandalastudio.etsy.com" target="_blank" rel="noopener">Etsy</a> ·
+        <a href="https://www.instagram.com/shopmayamandala" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/script.js"></script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
 </html>
