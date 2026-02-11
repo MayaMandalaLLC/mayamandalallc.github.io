@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maya Mandala | Coming Soon</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f6f1e8; /* warm ivory */
+    color: #4a3f35;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.footer-link {
+    margin-top: 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: #8c6b4f;
+    font-size: 16px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Under Gentle Creation</h1>
+    <p>
+            Our Ayurvedic wisdom and handcrafted pieces
+            are being gathered with intention.
+            This mandala is still unfolding.
+    </p>
+    <p>
+        Thank you for your patience as Maya Mandala blossoms.
+    </p>
+    <a href="index.html" class="footer-link">Return to Home</a>
+</div>
+</body>
+</html>
