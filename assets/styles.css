@@ -35,7 +35,7 @@ a:hover{opacity:.9}
 
 .links{display:flex; gap:14px; flex-wrap:wrap; align-items:center}
 .links a{
-  padding:10px 12px; border-radius:12px;
+  padding:10px 8px 10px 4px; border-radius:12px;
   border:1px solid transparent;
   color:var(--muted);
 }
@@ -151,98 +151,86 @@ input, textarea{
 }
 textarea{min-height:140px; resize:vertical}
 .helper{font-size:12px; color:var(--muted)}
-.notice{padding:12px 14px; border:1px dashed var(--line); border-radius:14px; background:#fff8; color:var(--muted)}
-diff --git a/assets/styles.css b/assets/styles.css
-index 0059bc0842a624d749ef208f03ad74481fb23127..4077225d01e8e271814d8057691e7cf8c6a9a3c8 100644
---- a/assets/styles.css
-+++ b/assets/styles.css
-@@ -130,25 +130,89 @@ a:hover{opacity:.9}
- }
- .product .title{font-weight:700}
- .product .desc{color:var(--muted); line-height:1.6; font-size:14px}
- .product .meta{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:6px}
- .small{font-size:12px; color:var(--muted)}
- .footer{
-   border-top:1px solid var(--line);
-   margin-top:26px;
-   padding:16px 0 30px;
-   color:var(--muted);
-   font-size:13px;
-   display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
- }
- 
- form{display:grid; gap:10px}
- input, textarea{
-   font: inherit;
-   padding:12px 12px;
-   border-radius:14px;
-   border:1px solid var(--line);
-   background:#fff;
- }
- textarea{min-height:140px; resize:vertical}
- .helper{font-size:12px; color:var(--muted)}
- .notice{padding:12px 14px; border:1px dashed var(--line); border-radius:14px; background:#fff8; color:var(--muted)}
-+
-+.products-nav {
-+  position: relative;
-+}
-+
-+.products-toggle {
-+  padding:10px 12px;
-+  border-radius:12px;
-+  border:1px solid transparent;
-+  color:var(--muted);
-+  background:transparent;
-+  font: inherit;
-+  cursor:pointer;
-+}
-+
-+.products-menu {
-+  position: absolute;
-+  top: calc(100% + 8px);
-+  left: 0;
-+  min-width: 230px;
-+  padding: 10px;
-+  border: 1px solid var(--line);
-+  border-radius: 12px;
-+  background: #fff;
-+  box-shadow: var(--shadow);
-+  display: none;
-+  z-index: 20;
-+}
-+
-+.products-menu.open {
-+  display: block;
-+}
-+
-+.products-menu > a,
-+.products-menu summary,
-+.products-menu details > a {
-+  display: block;
-+  padding: 8px 10px;
-+  border-radius: 10px;
-+  color: var(--muted);
-+}
-+
-+.products-menu > a:hover,
-+.products-menu details > a:hover,
-+.products-menu summary:hover {
-+  background: #fbf7ef;
-+}
-+
-+.products-menu details {
-+  margin-bottom: 2px;
-+}
-+
-+.products-menu details > a {
-+  padding-left: 20px;
-+}
-+
-+.products-menu summary {
-+  cursor: pointer;
-+  list-style: none;
-+}
-+
-+.products-menu summary::-webkit-details-marker {
-+  display: none;
+
+.products-nav {
+  position: relative;
+}
+
+.products-trigger {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.products-link {
+  padding:10px 8px 10px 12px;
+  color:var(--muted);
+}
+
+.products-toggle {
+  padding:10px 8px 10px 4px;
+  border-radius:12px;
+  border:1px solid transparent;
+  color:var(--muted);
+  background:transparent;
+  font: inherit;
+  cursor:pointer;
+}
+
+.products-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 230px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  display: none;
+  z-index: 20;
+}
+
+.products-menu.open {
+  display: block;
+}
+
+.products-menu > a,
+.products-menu summary,
+.products-menu details > a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--muted);
+}
+
+.products-menu > a:hover,
+.products-menu details > a:hover,
+.products-menu summary:hover {
+  background: #fbf7ef;
+}
+
+.products-menu details {
+  margin-bottom: 2px;
+}
+
+.products-menu details > a {
+  padding-left: 20px;
+}
+
+.products-menu summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.products-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.products-trigger:hover {
+  border-color: var(--line);
+  background: #fff8;
+}
+
 +}
