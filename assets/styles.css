@@ -152,3 +152,87 @@ input, textarea{
 textarea{min-height:140px; resize:vertical}
 .helper{font-size:12px; color:var(--muted)}
 .notice{padding:12px 14px; border:1px dashed var(--line); border-radius:14px; background:#fff8; color:var(--muted)}
+diff --git a/assets/styles.css b/assets/styles.css
+index 0059bc0842a624d749ef208f03ad74481fb23127..b1e73c84745d28e896578b207fdc475ed57ca6d7 100644
+--- a/assets/styles.css
++++ b/assets/styles.css
+@@ -130,25 +130,79 @@ a:hover{opacity:.9}
+ }
+ .product .title{font-weight:700}
+ .product .desc{color:var(--muted); line-height:1.6; font-size:14px}
+ .product .meta{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:6px}
+ .small{font-size:12px; color:var(--muted)}
+ .footer{
+   border-top:1px solid var(--line);
+   margin-top:26px;
+   padding:16px 0 30px;
+   color:var(--muted);
+   font-size:13px;
+   display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
+ }
+ 
+ form{display:grid; gap:10px}
+ input, textarea{
+   font: inherit;
+   padding:12px 12px;
+   border-radius:14px;
+   border:1px solid var(--line);
+   background:#fff;
+ }
+ textarea{min-height:140px; resize:vertical}
+ .helper{font-size:12px; color:var(--muted)}
+ .notice{padding:12px 14px; border:1px dashed var(--line); border-radius:14px; background:#fff8; color:var(--muted)}
++
++.products-nav {
++  position: relative;
++}
++
++.products-menu {
++  position: absolute;
++  top: calc(100% + 8px);
++  left: 0;
++  min-width: 230px;
++  padding: 10px;
++  border: 1px solid var(--line);
++  border-radius: 12px;
++  background: #fff;
++  box-shadow: var(--shadow);
++  display: none;
++  z-index: 20;
++}
++
++.products-menu.open {
++  display: block;
++}
++
++.products-menu > a,
++.products-menu summary,
++.products-menu details > a {
++  display: block;
++  padding: 8px 10px;
++  border-radius: 10px;
++  color: var(--muted);
++}
++
++.products-menu > a:hover,
++.products-menu details > a:hover,
++.products-menu summary:hover {
++  background: #fbf7ef;
++}
++
++.products-menu details {
++  margin-bottom: 2px;
++}
++
++.products-menu details > a {
++  padding-left: 20px;
++}
++
++.products-menu summary {
++  cursor: pointer;
++  list-style: none;
++}
++
++.products-menu summary::-webkit-details-marker {
++  display: none;
++}
