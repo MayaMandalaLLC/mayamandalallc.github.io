@@ -153,10 +153,10 @@ textarea{min-height:140px; resize:vertical}
 .helper{font-size:12px; color:var(--muted)}
 .notice{padding:12px 14px; border:1px dashed var(--line); border-radius:14px; background:#fff8; color:var(--muted)}
 diff --git a/assets/styles.css b/assets/styles.css
-index 0059bc0842a624d749ef208f03ad74481fb23127..b1e73c84745d28e896578b207fdc475ed57ca6d7 100644
+index 0059bc0842a624d749ef208f03ad74481fb23127..4077225d01e8e271814d8057691e7cf8c6a9a3c8 100644
 --- a/assets/styles.css
 +++ b/assets/styles.css
-@@ -130,25 +130,79 @@ a:hover{opacity:.9}
+@@ -130,25 +130,89 @@ a:hover{opacity:.9}
  }
  .product .title{font-weight:700}
  .product .desc{color:var(--muted); line-height:1.6; font-size:14px}
@@ -185,6 +185,16 @@ index 0059bc0842a624d749ef208f03ad74481fb23127..b1e73c84745d28e896578b207fdc475e
 +
 +.products-nav {
 +  position: relative;
++}
++
++.products-toggle {
++  padding:10px 12px;
++  border-radius:12px;
++  border:1px solid transparent;
++  color:var(--muted);
++  background:transparent;
++  font: inherit;
++  cursor:pointer;
 +}
 +
 +.products-menu {
