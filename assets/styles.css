@@ -13,7 +13,7 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  font-family: "Avenir Next", "Segoe UI", sans-serif;
+font-family: "Poppins", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--paper);
 }
@@ -46,7 +46,7 @@ a { color: inherit; text-decoration: none; }
 .nav-group a { font-size: 14px; letter-spacing: .08em; color: #4c453e; font-weight: 600; }
 .logo-block { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .logo-block img { width: 54px; height: 54px; object-fit: contain; }
-.logo-title { font-family: Georgia, serif; font-size: 40px; letter-spacing: .06em; }
+.logo-title { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: 40px; letter-spacing: .06em; }
 .logo-sub { font-size: 12px; letter-spacing: .14em; color: var(--muted); }
 
 .hero-section {
@@ -61,12 +61,12 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-overlay { padding: 80px 60px; }
 .hero-overlay h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(44px, 5vw, 76px);
+  font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif;
+  font-size: clamp(41px, 4.7vw, 73px);
   line-height: 1.08;
   margin: 0 0 24px;
 }
-.hero-overlay p { color: #544d45; font-size: 28px; max-width: 580px; margin: 0 0 32px; line-height: 1.4; }
+.hero-overlay p { color: #544d45; font-size: 25px; max-width: 580px; margin: 0 0 32px; line-height: 1.4; }
 .hero-product { width: 100%; max-width: 560px; justify-self: center; transform: translateY(50px); filter: drop-shadow(0 22px 22px rgba(0,0,0,.15)); }
 .hero-cta { display: flex; gap: 20px; flex-wrap: wrap; }
 .btn { padding: 14px 24px; border-radius: 2px; font-weight: 700; letter-spacing: .08em; font-size: 14px; }
@@ -75,7 +75,7 @@ a { color: inherit; text-decoration: none; }
 
 .rituals-section { padding: 70px 20px; text-align: center; }
 .eyebrow { letter-spacing: .15em; font-size: 13px; color: var(--muted); font-weight: 700; margin: 0 0 10px; }
-.rituals-section h2 { font-family: Georgia, serif; font-size: clamp(36px, 3vw, 52px); margin: 0 0 34px; }
+.rituals-section h2 { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: clamp(33px, 2.8vw, 49px); margin: 0 0 34px; }
 .ritual-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .ritual-card { border: 1px solid var(--line); background: #fff; text-align: left; }
 .card-media { height: 220px; background-size: cover; background-position: center; }
@@ -83,14 +83,14 @@ a { color: inherit; text-decoration: none; }
 .media-2 { background: linear-gradient(120deg, #c89667, #edd2ae); }
 .media-3 { background: linear-gradient(120deg, #b88b57, #dfc09d); }
 .card-content { padding: 28px; }
-.card-content h3 { font-family: Georgia, serif; font-size: 34px; margin: 0 0 10px; }
+.card-content h3 { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: 31px; margin: 0 0 10px; }
 .card-content p { color: var(--muted); font-size: 22px; line-height: 1.5; margin: 0 0 16px; }
 .card-content a { letter-spacing: .08em; font-weight: 700; }
 
 .split-section { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 14px; }
 .split-panel { padding: 46px; background: #f7efe0; }
 .split-panel.muted { background: #e9ebe3; }
-.split-panel h3 { font-family: Georgia, serif; font-size: 42px; margin: 6px 0 12px; line-height: 1.15; }
+.split-panel h3 { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: 39px; margin: 6px 0 12px; line-height: 1.15; }
 .split-panel p { font-size: 24px; color: #544d45; line-height: 1.6; }
 .split-panel a { display: inline-block; margin-top: 6px; letter-spacing: .1em; font-weight: 700; }
 .split-image { min-height: 350px; }
@@ -110,7 +110,7 @@ a { color: inherit; text-decoration: none; }
 
 .newsletter { background: var(--cream); border-top: 1px solid var(--line); padding: 40px 0; }
 .newsletter-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
-.newsletter h3 { font-family: Georgia, serif; font-size: 52px; margin: 0; max-width: 560px; }
+.newsletter h3 { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: 49px; margin: 0; max-width: 560px; }
 .newsletter p { color: #5e564d; font-size: 24px; }
 .newsletter form { display: flex; }
 .newsletter input { flex: 1; padding: 14px; border: 1px solid #c9b9a8; font-size: 18px; }
