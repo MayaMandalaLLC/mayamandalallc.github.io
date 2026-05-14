@@ -13,9 +13,14 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-font-family: "Poppins", "Avenir Next", "Segoe UI", sans-serif;
+  font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--paper);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  color: #3a2f29;
 }
 a { color: inherit; text-decoration: none; }
 
@@ -50,47 +55,60 @@ a { color: inherit; text-decoration: none; }
 .logo-sub { font-size: 12px; letter-spacing: .14em; color: var(--muted); }
 
 .hero-section {
-  max-width: var(--max);
+  width: 100%;
   margin: 0 auto;
-  background: linear-gradient(135deg, #e9decc, #f4ebdb);
-  min-height: 620px;
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  align-items: end;
+  min-height: 660px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
-.hero-overlay { padding: 80px 60px; }
-.hero-overlay h1 {
-  font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif;
-  font-size: clamp(41px, 4.7vw, 73px);
-  line-height: 1.08;
-  margin: 0 0 24px;
+.hero-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.hero-overlay p { color: #544d45; font-size: 25px; max-width: 580px; margin: 0 0 32px; line-height: 1.4; }
-.hero-product { width: 100%; max-width: 560px; justify-self: center; transform: translateY(50px); filter: drop-shadow(0 22px 22px rgba(0,0,0,.15)); }
-.hero-cta { display: flex; gap: 20px; flex-wrap: wrap; }
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max);
+  padding: 80px 60px;
+}
+.hero-overlay h1 {
+  font-size: clamp(48px, 4.7vw, 70px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 720px;
+  color: #3a2f29;
+  text-shadow: 0 2px 16px rgba(255, 255, 255, 0.35);
+}
 .btn { padding: 14px 24px; border-radius: 2px; font-weight: 700; letter-spacing: .08em; font-size: 14px; }
 .btn-primary { background: var(--green2); color: #fff; }
 .btn-link { border: 1px solid transparent; }
 
 .rituals-section { padding: 70px 20px; text-align: center; }
 .eyebrow { letter-spacing: .15em; font-size: 13px; color: var(--muted); font-weight: 700; margin: 0 0 10px; }
-.rituals-section h2 { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: clamp(33px, 2.8vw, 49px); margin: 0 0 34px; }
+.rituals-section h2 { font-size: clamp(33px, 2.8vw, 49px); margin: 0 0 34px; }
 .ritual-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .ritual-card { border: 1px solid var(--line); background: #fff; text-align: left; }
 .card-media { height: 220px; background-size: cover; background-position: center; }
-.media-1 { background: linear-gradient(120deg, #ceb28d, #f0dfc6); }
+.media-1 { background-image: url("MM Website Homepage Image 1.png"); }
 .media-2 { background: linear-gradient(120deg, #c89667, #edd2ae); }
 .media-3 { background: linear-gradient(120deg, #b88b57, #dfc09d); }
 .card-content { padding: 28px; }
-.card-content h3 { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: 31px; margin: 0 0 10px; }
+.card-content h3 { font-size: 31px; margin: 0 0 10px; }
 .card-content p { color: var(--muted); font-size: 22px; line-height: 1.5; margin: 0 0 16px; }
 .card-content a { letter-spacing: .08em; font-weight: 700; }
 
 .split-section { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 14px; }
 .split-panel { padding: 46px; background: #f7efe0; }
 .split-panel.muted { background: #e9ebe3; }
-.split-panel h3 { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: 39px; margin: 6px 0 12px; line-height: 1.15; }
+.split-panel h3 { font-size: 39px; margin: 6px 0 12px; line-height: 1.15; }
 .split-panel p { font-size: 24px; color: #544d45; line-height: 1.6; }
 .split-panel a { display: inline-block; margin-top: 6px; letter-spacing: .1em; font-weight: 700; }
 .split-image { min-height: 350px; }
@@ -110,7 +128,7 @@ a { color: inherit; text-decoration: none; }
 
 .newsletter { background: var(--cream); border-top: 1px solid var(--line); padding: 40px 0; }
 .newsletter-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
-.newsletter h3 { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: 49px; margin: 0; max-width: 560px; }
+.newsletter h3 { font-size: 49px; margin: 0; max-width: 560px; }
 .newsletter p { color: #5e564d; font-size: 24px; }
 .newsletter form { display: flex; }
 .newsletter input { flex: 1; padding: 14px; border: 1px solid #c9b9a8; font-size: 18px; }
@@ -123,8 +141,9 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 1080px) {
   .main-nav { grid-template-columns: 1fr; text-align: center; }
   .nav-group, .nav-group:last-child { justify-content: center; }
-  .hero-section { grid-template-columns: 1fr; }
-  .hero-product { transform: none; max-width: 380px; padding-bottom: 24px; }
+  .hero-section { min-height: 520px; }
+  .hero-overlay { padding: 60px 28px; }
+  .hero-overlay h1 { font-size: clamp(40px, 10vw, 62px); }
   .ritual-grid { grid-template-columns: 1fr; }
   .split-section { grid-template-columns: 1fr; }
   .values { grid-template-columns: 1fr 1fr; }
