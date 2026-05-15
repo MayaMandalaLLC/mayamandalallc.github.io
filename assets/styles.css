@@ -16,6 +16,17 @@ body {
   font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--paper);
+} <!--- NEXT 11 LINES ARE FOR ZOOMING OUT HOMEPAGE BY 10%--->
+.home-page {
+  zoom: 90%;
+}
+
+@supports not (zoom: 1) {
+  .home-page {
+    transform: scale(0.9);
+    transform-origin: top center;
+    width: 111.111%;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,7 +110,7 @@ a { color: inherit; text-decoration: none; }
 .card-media { height: 220px; background-size: cover; background-position: center; }
 .media-1 { background-image: url("MM Website Homepage Image 1.png"); }
 .media-2 { background: linear-gradient(120deg, #c89667, #edd2ae); }
-.media-3 { background: linear-gradient(120deg, #b88b57, #dfc09d); }
+.media-3 { background-image: url("MM Homepage Facial Ritual Image.png"); background-size: cover; background-position: center; }
 .card-content { padding: 28px; }
 .card-content h3 { font-size: 31px; margin: 0 0 10px; }
 .card-content p { color: var(--muted); font-size: 22px; line-height: 1.5; margin: 0 0 16px; }
