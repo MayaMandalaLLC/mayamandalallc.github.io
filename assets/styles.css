@@ -66,8 +66,9 @@ a { color: inherit; text-decoration: none; }
 .logo-sub { font-size: 12px; letter-spacing: .14em; color: var(--muted); }
 
 .hero-section {
-  width: 100%;
-  margin: 0 auto;
+  width: 100vw;
+  margin: 0;
+  margin-left: calc(50% - 50vw);
   min-height: 660px;
   position: relative;
   display: flex;
@@ -86,7 +87,8 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: var(--max);
+  padding: 40px 60px 80px;
+  transform: translateY(-36px);
   padding: 80px 60px;
 }
 .hero-overlay h1 {
@@ -153,7 +155,7 @@ a { color: inherit; text-decoration: none; }
   .main-nav { grid-template-columns: 1fr; text-align: center; }
   .nav-group, .nav-group:last-child { justify-content: center; }
   .hero-section { min-height: 520px; }
-  .hero-overlay { padding: 60px 28px; }
+.hero-overlay { padding: 44px 28px 60px; transform: translateY(-18px); }
   .hero-overlay h1 { font-size: clamp(40px, 10vw, 62px); }
   .ritual-grid { grid-template-columns: 1fr; }
   .split-section { grid-template-columns: 1fr; }
