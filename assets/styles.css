@@ -151,6 +151,15 @@ a { color: inherit; text-decoration: none; }
 .site-footer { background: radial-gradient(circle at right, #1e5e57, #103f3b 65%); color: #f3ecdf; }
 .footer-inner { padding: 20px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
 .footer-links { display: flex; gap: 24px; flex-wrap: wrap; letter-spacing: .08em; font-size: 14px; }
+.site-disclaimer { <-- DISCLAIMER -->
+  margin: 0;
+  padding: 0 20px 20px;
+  font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #e7ddcf;
+  text-align: center;
+}
 
 @media (max-width: 1080px) {
   .main-nav { grid-template-columns: 1fr; text-align: center; }
