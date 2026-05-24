@@ -16,17 +16,7 @@ body {
   font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--paper);
-} <!--- NEXT 11 LINES ARE FOR ZOOMING OUT HOMEPAGE BY 10%--->
-.home-page {
-  zoom: 90%;
 }
-
-@supports not (zoom: 1) {
-  .home-page {
-    transform: scale(0.9);
-    transform-origin: top center;
-    width: 111.111%;
-  }
 }
 
 
