@@ -163,3 +163,68 @@ a { color: inherit; text-decoration: none; }
   .values { grid-template-columns: 1fr 1fr; }
   .newsletter-inner { grid-template-columns: 1fr; }
   .newsletter form { flex-direction: column; gap: 10px; }}
+
+.dosha-quiz-page {
+  padding: 48px 20px 72px;
+  max-width: 940px;
+}
+
+.dosha-quiz-page h1 {
+  font-size: clamp(42px, 5vw, 56px);
+  margin: 0 0 10px;
+}
+
+.dosha-intro {
+  color: var(--muted);
+  margin: 0 0 30px;
+}
+
+.dosha-form {
+  display: grid;
+  gap: 20px;
+}
+
+.quiz-question {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 18px;
+}
+
+.quiz-question legend {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0;
+  line-height: 1.45;
+}
+
+.quiz-option input {
+  margin-top: 3px;
+}
+
+.dosha-result {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+
+.result-prompt {
+  margin: 0;
+}
+
+.btn-reset {
+  margin-top: 18px;
+  padding: 12px 18px;
+  border: 1px solid var(--green);
+  color: var(--green);
+  background: #fff;
+  font-weight: 700;
+  letter-spacing: .05em;
+  cursor: pointer;
+}
