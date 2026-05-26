@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maya Mandala — Dosha Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="announcement">INSPIRED BY AYURVEDA. ROOTED IN TRADITION. MADE FOR MODERN LIVING.</div>
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="nav-group">
+        <a href="index.html">HOME</a>
+        <a href="under-construction.html">RITUALS</a>
+        <a href="under-construction.html">STORIES</a>
+        <a href="under-construction.html">ETHNIC GOODS</a>
+      </div>
+      <a class="logo-block" href="index.html">
+        <img src="assets/mayamandalaroundlogo.png" alt="Maya Mandala logo" />
+        <span class="logo-title">MAYA MANDALA</span>
+        <span class="logo-sub">STORIES · ETHNIC GOODS</span>
+        <span class="logo-sub">AYURVEDIC WELLNESS</span>
+      </a>
+      <div class="nav-group">
+        <a href="under-construction.html">ABOUT</a>
+        <a href="dosha-quiz.html">DOSHA QUIZ</a>
+        <a href="https://mayamandalastudio.etsy.com" target="_blank" rel="noopener">ETSY SHOP</a>
+        <a href="mailto:info@mayamandalallc.com">CONTACT</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container dosha-quiz-page">
+    <h1>Dosha Quiz</h1>
+    <p class="dosha-intro">Select one answer for every question to discover your primary and secondary dosha body profile.</p>
+
+    <form id="dosha-quiz-form" class="dosha-form"></form>
+    <div id="dosha-result" class="dosha-result" aria-live="polite"></div>
+    <button id="reset-quiz" type="button" class="btn-reset">RESET QUIZ</button>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="under-construction.html">ABOUT</a>
+        <a href="mailto:info@mayamandalallc.com">CONTACT</a>
+        <a href="under-construction.html">SHIPPING &amp; POLICIES</a>
+        <a href="privacy.html">PRIVACY POLICY</a>
+      </div>
+      <p>© <span id="y"></span> Maya Mandala LLC</p>
+    </div>
+  </footer>
+
+  <script>
+    const quizData = [
+      ["How would you describe your body?", "Slender, narrow frame with delicate bones and lean muscles.", "Medium frame with defined muscles.", "Sturdy, broad frame with large bones."],
+      ["How would you describe your joints?", "Small joints, with occasional cracking joints.", "Flexible joints that are average in size.", "Broad and firm joints."],
+      ["How would you describe your skin?", "Dry and thin skin. Rough and cool to touch.", "Skin is soft and warm; and often feels moist.", "Skin is soft, moist to oily, and cool and firm."],
+      ["How would you describe your complexion?", "Skin may have irregular pigmentation, and tans easily.", "Skin has healthy blush, and will likely have freckles and moles.", "Skin has even complexion."],
+      ["How would you describe your hair?", "Hair is fine and tends to be dry.", "Hair is fine and tends to be slightly oily. There may be signs of early balding.", "Hair is lush, thick, dense and slightly oily."],
+      ["How would you describe your nails and lips?", "Nails may be dry and brittle. Lips likely dry and thin.", "Nails are likely flexible and soft. Lips likely pink and soft.", "Nails likely thick, smooth and hard. Lips likely pale, soft and full."],
+      ["How much do you perspire, and how is body odour?", "Very little sweating.", "Heavy sweat and strong body odour.", "Medium sweat and body odour not noticeable."],
+      ["Please sit in a relaxed position, preferably without any exercise or caffeine in last two hours. Take a few deep breaths and feel your pulse.", "Pulse is quick and soft.", "Pulse is strong and regular.", "Pulse is full, and slow."],
+      ["How active are you?", "Very active, and tend to fidget.", "Enjoy a good workout, and with a set goal.", "Do not get motivated to exercise, and feel sedentary most of the time."],
+      ["What is your body weight?", "Lesser than average weight for age and body type.", "Almost equal to average weight for body type.", "Higher than average weight for body type."],
+      ["What is your favorite climate?", "Prefer hot weather and do not like cold.", "Prefer cold weather and do not like heat.", "No preference; but like warmer weather."],
+      ["How is your speech?", "Speak fast, and likely to stutter.", "Speak eloquently and full of confidence.", "Speak steady and deliberately."],
+      ["How do you sleep?", "Light sleeper and tend to wake up early in morning.", "Sleep well, and require about 6-8 hours of sleep.", "Sleep deeply and restfully, and find it difficult to wake up."],
+      ["What type of food do you like to eat?", "Prefer warm food; food likely salty, sour or sweet.", "Prefer warm food; food likely pungent or dry.", "Prefer cold food; food likely sweet and bitter."],
+      ["How can you describe your bowel movement?", "Bowel movement often less than once per day; and is hard and dry.", "Bowel movement often more than once per day; and is soft.", "Bowel movement is regular and well formed."],
+      ["How would you describe your emotions?", "Emotion changes quickly, and have strong likes and dislikes.", "Emotions are strong; but forgive easily.", "Emotions are stable."],
+      ["What is your reaction to stress?", "Nervous and anxious; and often feel insecure.", "Get angry and irritated easily.", "Calm and steady."],
+      ["How is your memory?", "Very good short-term memory, but poor long-term memory.", "Overall good short- and long-term memory.", "Poor short-term memory, but good long-term memory."],
+      ["How is your thought process?", "Thoughts often wander, and find it hard to focus.", "Clear thoughts, and often prefer analytical thinking.", "Methodical thoughts; and prefer to focus on one topic at a time."],
+      ["How do you perceive change?", "Adapt well to change.", "Approach this as a challenge.", "Dislike change."]
+    ];
+
+    const doshaNames = {
+      a: { primary: "PRIMARY VATA BODY", secondary: "SECONDARY VATA BODY" },
+      b: { primary: "PRIMARY PITTA BODY", secondary: "SECONDARY PITTA BODY" },
+      c: { primary: "PRIMARY KAPHA BODY", secondary: "SECONDARY KAPHA BODY" }
+    };
+
+    const form = document.getElementById('dosha-quiz-form');
+    const resultBox = document.getElementById('dosha-result');
+
+    quizData.forEach((item, index) => {
+      const fieldset = document.createElement('fieldset');
+      fieldset.className = 'quiz-question';
+
+      const legend = document.createElement('legend');
+      legend.textContent = `${index + 1}. ${item[0]}`;
+      fieldset.appendChild(legend);
+
+      ['a', 'b', 'c'].forEach((key, keyIndex) => {
+        const optionWrap = document.createElement('label');
+        optionWrap.className = 'quiz-option';
+
+        const input = document.createElement('input');
+        input.type = 'radio';
+        input.name = `q${index + 1}`;
+        input.value = key;
+        input.required = true;
+        input.addEventListener('change', updateResults);
+
+        const text = document.createElement('span');
+        text.textContent = `${key}. ${item[keyIndex + 1]}`;
+
+        optionWrap.append(input, text);
+        fieldset.appendChild(optionWrap);
+      });
+
+      form.appendChild(fieldset);
+    });
+
+    function updateResults() {
+      const selections = new FormData(form);
+      const counts = { a: 0, b: 0, c: 0 };
+
+      for (const value of selections.values()) {
+        counts[value] += 1;
+      }
+
+
+      const answered = Array.from(selections.keys()).length;
+      if (answered !== quizData.length) {
+        resultBox.innerHTML = `<p class="result-prompt">Answered ${answered} of ${quizData.length} questions.</p>`;
+        return;
+      }
+
+      const sorted = Object.entries(counts).sort((x, y) => y[1] - x[1]);
+      const top = sorted[0][0];
+      const second = sorted[1][0];
+
+      resultBox.innerHTML = `
+        <h2>Your Results</h2>
+        <p><strong>${doshaNames[top].primary}</strong> (${counts[top]} answers)</p>
+        <p><strong>${doshaNames[second].secondary}</strong> (${counts[second]} answers)</p>
+      `;
+    }
+
+    document.getElementById('reset-quiz').addEventListener('click', () => {
+      form.reset();
+      resultBox.innerHTML = '<p class="result-prompt">Quiz reset. Select one option for each question.</p>';
+    });
+
+    document.getElementById('y').textContent = new Date().getFullYear();
+    resultBox.innerHTML = '<p class="result-prompt">Select one option for each question.</p>';
+  </script>
+</body>
+</html>
