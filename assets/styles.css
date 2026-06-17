@@ -81,11 +81,11 @@ a { color: inherit; text-decoration: none; }
   font-size: 60px;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  margin: 0 0 0 auto;
+  margin: 0 auto 0 0;
   max-width: 720px;
   color: #3a2f29;
   text-shadow: 0 2px 16px rgba(255, 255, 255, 0.35);
-  text-align: right;
+  text-align: left;
 }
 .btn { padding: 14px 24px; border-radius: 2px; font-weight: 700; letter-spacing: .08em; font-size: 14px; }
 .btn-primary { background: var(--green2); color: #fff; }
