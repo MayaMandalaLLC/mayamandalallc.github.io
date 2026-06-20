@@ -48,7 +48,37 @@ a { color: inherit; text-decoration: none; }
 }
 .nav-group { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
 .nav-group:last-child { justify-content: flex-end; }
-.nav-group a { font-size: 14px; letter-spacing: .08em; color: #4c453e; font-weight: 600; }
+.nav-group a,
+.nav-dropdown summary { font-size: 14px; letter-spacing: .08em; color: #4c453e; font-weight: 600; }
+.nav-dropdown { position: relative; }
+.nav-dropdown summary { cursor: pointer; list-style: none; }
+.nav-dropdown summary::-webkit-details-marker { display: none; }
+.nav-dropdown summary::after { content: " ▾"; font-size: 11px; letter-spacing: 0; }
+.nav-dropdown[open] summary::after { content: " ▴"; }
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  z-index: 10;
+  min-width: 190px;
+  padding: 10px 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px rgba(47, 42, 36, 0.12);
+  transform: translateX(-50%);
+}
+.nav-dropdown-menu a {
+  display: block;
+  padding: 11px 18px;
+  letter-spacing: .04em;
+  text-align: left;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a:focus {
+  background: var(--cream);
+  color: var(--green);
+}
 .logo-block { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .logo-block img { width: 54px; height: 54px; object-fit: contain; }
 .logo-title { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: 40px; letter-spacing: .06em; }
