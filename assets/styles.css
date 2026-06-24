@@ -281,16 +281,20 @@ a { color: inherit; text-decoration: none; }
 }
 
 .morning-hero {
-  display: grid;
-  grid-template-columns: minmax(320px, 42%) 1fr;
-  align-items: center;
+  position: relative;
   min-height: 640px;
   background: var(--paper);
   overflow: hidden;
 }
 
 .morning-hero-copy {
-  padding: 72px clamp(28px, 5vw, 84px);
+  position: absolute;
+  z-index: 1;
+  left: clamp(28px, 7vw, 112px);
+  top: 50%;
+  max-width: min(520px, 42vw);
+  transform: translateY(-50%);
+  padding: 0;
 }
 
 .morning-hero-copy h1 {
@@ -489,8 +493,11 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 1080px) {
   .morning-hero {
-    grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+    .morning-hero-copy {
+    max-width: min(520px, 72vw);
   }
 
   .morning-hero img {
