@@ -130,8 +130,8 @@ a { color: inherit; text-decoration: none; }
 .media-1 { background-image: url("MM Website Homepage Image 1.png"); }
 .media-2 { background-image: url("MM Homepage Hair Ritual Image.png"); background-size: cover; background-position: center; }
 .media-3 { background-image: url("MM Homepage Facial Ritual Image.png"); background-size: cover; background-position: center; }
-.media-stories { background-image: url("Homepage Stories Image"); background-size: cover; background-position: center; }
-.media-ethnic-goods { background-image: url("Homepage Ethnic Goods Image"); background-size: cover; background-position: center; }
+.media-stories { background-image: url("Homepage Stories Image.png"); background-size: cover; background-position: center; }
+.media-ethnic-goods { background-image: url("Homepage Ethnic Goods Image.png"); background-size: cover; background-position: center; }
 
 .featured-categories { padding: 0 20px 56px; }
 .category-grid { display: grid; gap: 24px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
