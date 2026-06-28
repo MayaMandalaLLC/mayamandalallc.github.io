@@ -172,7 +172,7 @@ a { color: inherit; text-decoration: none; }
 .site-footer { background: radial-gradient(circle at right, #1e5e57, #103f3b 65%); color: #f3ecdf; }
 .footer-inner { padding: 20px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
 .footer-links { display: flex; gap: 24px; flex-wrap: wrap; letter-spacing: .08em; font-size: 14px; }
-.site-disclaimer { <-- DISCLAIMER -->
+.site-disclaimer { /* DISCLAIMER */
   margin: 0;
   padding: 0 20px 20px;
   font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
@@ -268,7 +268,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 
-.dosha-disclaimer { <-- DISCLAIMER FOR DOSHA QUIZ PAGE-->
+.dosha-disclaimer { /* DISCLAIMER FOR DOSHA QUIZ PAGE */
   margin-top: 20px;
   font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
   font-size: 11px;
@@ -528,5 +528,250 @@ a { color: inherit; text-decoration: none; }
     justify-items: center;
     text-align: center;
     padding: 28px 22px;
+  }
+}
+
+.hair-ritual-page {
+  background: var(--paper);
+}
+
+.hair-hero {
+  position: relative;
+  min-height: 640px;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.hair-hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  object-fit: cover;
+}
+
+.hair-hero-copy {
+  position: absolute;
+  z-index: 1;
+  left: clamp(28px, 7vw, 112px);
+  top: 50%;
+  max-width: min(570px, 43vw);
+  transform: translateY(-50%);
+  text-shadow: 0 2px 18px rgba(255, 255, 255, 0.4);
+}
+
+.hair-hero-copy h1 {
+  margin: 0 0 22px;
+  color: var(--green);
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 0.96;
+  letter-spacing: 0.04em;
+}
+
+.hair-hero-copy p {
+  margin: 0;
+  color: #4d463f;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: clamp(25px, 2.4vw, 36px);
+  line-height: 1.28;
+}
+
+.hair-routine {
+  padding: 34px 20px 22px;
+}
+
+.choose-ritual {
+  padding: 0 20px 34px;
+}
+
+.hair-section-heading {
+  position: relative;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.hair-section-heading::after {
+  content: "✥";
+  display: block;
+  width: 124px;
+  margin: 8px auto 0;
+  border-top: 1px solid #d5bf9c;
+  color: var(--bronze);
+  font-size: 20px;
+  line-height: 0;
+}
+
+.hair-section-heading h2 {
+  margin: 0;
+  font-size: clamp(35px, 3.4vw, 49px);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.hair-step-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.hair-step-card {
+  position: relative;
+  min-height: 246px;
+  padding: 24px 24px 28px;
+  border: 1px solid #dfcdb5;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 14px 40px rgba(47, 42, 36, 0.04);
+  text-align: center;
+}
+
+.hair-step-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  background: #58603b;
+  color: #fff;
+  font-weight: 700;
+}
+
+.hair-step-icon {
+  display: grid;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 16px;
+  place-items: center;
+  border: 1px solid #cdbd9d;
+  border-radius: 50%;
+  color: #ad956f;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 42px;
+}
+
+.hair-step-card h3,
+.hair-product-card h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.hair-step-card p,
+.hair-product-card p {
+  margin: 0;
+  color: #25242a;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.hair-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.hair-product-card {
+  overflow: hidden;
+  border: 1px solid #dfcdb5;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.56);
+  text-align: center;
+}
+
+.hair-product-card h3 {
+  padding: 14px 18px 0;
+}
+
+.hair-product-card p {
+  padding: 0 22px 22px;
+}
+
+.hair-product-image {
+  height: 210px;
+  background-color: #efe6da;
+  background-position: center;
+  background-size: cover;
+}
+
+.oil-image {
+  background-image: url("MM Homepage Hair Ritual Image.png");
+}
+
+.oil-image.second {
+  background-position: 58% center;
+}
+
+.comb-image,
+.wand-image {
+  background-image: url("Hair care sketch.png"), linear-gradient(135deg, #f4eee4, #e7d9c7);
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+}
+
+.comb-image {
+  background-position: center 42%, center;
+}
+
+.wand-image {
+  background-position: right 38% center, center;
+}
+
+.hair-closing {
+  padding: 8px 0 34px;
+  text-align: center;
+}
+
+.hair-closing img {
+  display: block;
+  width: 100%;
+  max-height: 330px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hair-closing h2 {
+  margin: 28px auto 0;
+  padding: 0 20px;
+  color: var(--green);
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+@media (max-width: 1080px) {
+  .hair-hero {
+    min-height: auto;
+  }
+
+  .hair-hero img {
+    min-height: 430px;
+  }
+
+  .hair-hero-copy {
+    max-width: min(570px, 72vw);
+  }
+
+  .hair-step-grid,
+  .hair-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .hair-hero-copy {
+    max-width: calc(100% - 48px);
+  }
+
+  .hair-step-grid,
+  .hair-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hair-closing h2 {
+    font-size: clamp(40px, 12vw, 60px);
   }
 }
