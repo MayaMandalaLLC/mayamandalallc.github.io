@@ -510,6 +510,29 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 720px) {
+   .hero-section {
+    min-height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--cream);
+  }
+
+  .hero-background {
+    position: relative;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .hero-overlay {
+    padding: 32px 22px 38px;
+    background: var(--cream);
+  }
+
+  .hero-overlay h1 {
+    font-size: clamp(36px, 12vw, 48px);
+    text-align: center;
+  }
+
   .section-title-row {
     grid-template-columns: 1fr;
     gap: 14px;
