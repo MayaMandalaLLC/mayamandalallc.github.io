@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maya Mandala — Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="announcement">INSPIRED BY AYURVEDA. ROOTED IN TRADITION. MADE FOR MODERN LIVING.</div>
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="nav-group">
+        <a href="index.html">HOME</a>
+        <details class="nav-dropdown">
+          <summary>RITUALS</summary>
+          <div class="nav-dropdown-menu">
+            <a href="Morning-Ritual.html">Morning Ritual</a>
+            <a href="Hair-Ritual.html">Hair Ritual</a>
+            <a href="under-construction.html">Bedtime Ritual</a>
+          </div>
+        </details>
+        <a href="under-construction.html">STORIES</a>
+        <a href="under-construction.html">ETHNIC GOODS</a>
+      </div>
+      <a class="logo-block" href="index.html">
+        <img src="assets/mayamandalaroundlogo.png" alt="Maya Mandala logo" />
+        <span class="logo-title">MAYA MANDALA</span>
+        <span class="logo-sub">STORIES · ETHNIC GOODS</span>
+        <span class="logo-sub">AYURVEDIC WELLNESS</span>
+      </a>
+      <div class="nav-group">
+        <a href="under-construction.html">ABOUT</a>
+        <a href="dosha-quiz.html">DOSHA QUIZ</a>
+        <a href="https://shop.mayamandalallc.com" target="_blank" rel="noopener">SHOP</a>
+        <a href="contact.html" aria-current="page">CONTACT</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container contact-page">
+    <section class="contact-card" aria-labelledby="contact-title">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h1 id="contact-title">Contact Maya Mandala</h1>
+      <p class="contact-intro">Send us a note with your question, request, or feedback. You may attach files up to 2 MB total.</p>
+
+      <form class="contact-form" action="mailto:info@mayamandalallc.com" method="post" enctype="multipart/form-data">
+        <label for="contact-subject">Subject</label>
+        <input id="contact-subject" name="subject" type="text" placeholder="How can we help?" required />
+
+        <label for="contact-body">Message</label>
+        <textarea id="contact-body" name="body" rows="9" placeholder="Write your message here..." required></textarea>
+
+        <label for="contact-attachments">Attachments <span>(optional, up to 2 MB total)</span></label>
+        <input id="contact-attachments" name="attachments" type="file" multiple data-max-size="2097152" />
+        <p id="attachment-help" class="form-help" aria-live="polite">Accepted by your email app; total selected file size must be 2 MB or less.</p>
+
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="under-construction.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="under-construction.html">SHIPPING &amp; POLICIES</a>
+        <a href="privacy.html">PRIVACY POLICY</a>
+      </div>
+      <p>© <span id="y"></span> Maya Mandala LLC</p>
+    </div>
+    <p class="site-disclaimer">Maya Mandala products and rituals are rooted in traditional wellness practices 
+            and are offered for educational and self-care purposes only. These statements have not been evaluated by the 
+            Food and Drug Administration. Our products are not intended to diagnose, treat, cure, or prevent any disease. 
+            Please consult a qualified healthcare professional for personalized medical guidance.</p>
+  </footer>
+  <script src="assets/script.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
