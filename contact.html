@@ -45,18 +45,35 @@
     <section class="contact-card" aria-labelledby="contact-title">
       <p class="eyebrow">GET IN TOUCH</p>
       <h1 id="contact-title">Contact Maya Mandala</h1>
-      <p class="contact-intro">Send us a note with your question, request, or feedback. You may attach files up to 2 MB total.</p>
+      <p class="contact-intro">Send us a note with your question, request, or feedback.</p>
 
-      <form class="contact-form" action="mailto:info@mayamandalallc.com" method="post" enctype="multipart/form-data">
-        <label for="contact-subject">Subject</label>
-        <input id="contact-subject" name="subject" type="text" placeholder="How can we help?" required />
+      <form class="contact-form" action="mailto:info@mayamandalallc.com" method="post" enctype="text/plain">
+        <label class="contact-field" for="contact-email">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M4 6h16v12H4z" />
+              <path d="m4 7 8 6 8-6" />
+            </svg>
+          </span>
+          <span class="sr-only">Email</span>
+          <input id="contact-email" name="email" type="email" placeholder="Email" required />
+        </label>
 
-        <label for="contact-body">Message</label>
-        <textarea id="contact-body" name="body" rows="9" placeholder="Write your message here..." required></textarea>
+        <label class="contact-field" for="contact-name">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="8" r="3" />
+              <path d="M6.5 19a5.5 5.5 0 0 1 11 0" />
+            </svg>
+          </span>
+          <span class="sr-only">Name</span>
+          <input id="contact-name" name="name" type="text" placeholder="Name" required />
+        </label>
 
-        <label for="contact-attachments">Attachments <span>(optional, up to 2 MB total)</span></label>
-        <input id="contact-attachments" name="attachments" type="file" multiple data-max-size="2097152" />
-        <p id="attachment-help" class="form-help" aria-live="polite">Accepted by your email app; total selected file size must be 2 MB or less.</p>
+        <label class="contact-field contact-message" for="contact-body">
+          <span class="sr-only">Message</span>
+          <textarea id="contact-body" name="message" rows="9" placeholder="Message" required></textarea>
+        </label>
 
         <button type="submit">SEND MESSAGE</button>
       </form>
