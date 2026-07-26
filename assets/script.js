@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const dropdowns = document.querySelectorAll('.nav-dropdown');
+  const closeTimers = new WeakMap();
   const closeDropdown = (dropdown) => {
+    clearTimeout(closeTimers.get(dropdown));
     dropdown.removeAttribute('open');
   };
 
@@ -13,8 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    dropdown.addEventListener('mouseenter', () => {
+      clearTimeout(closeTimers.get(dropdown));
+    });
+
     dropdown.addEventListener('mouseleave', () => {
-      closeDropdown(dropdown);
+      const closeTimer = setTimeout(() => closeDropdown(dropdown), 150);
+      closeTimers.set(dropdown, closeTimer);
     });
   });
 
