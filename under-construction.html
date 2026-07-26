@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maya Mandala | Coming Soon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,10 +61,14 @@ p {
     color: #6d5b4c;
     text-align: center;
 }
+.announcement,
+.site-header {
+    font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+}
 </style>
 </head>
 
-<body>
+<body class="home-page">
       <div class="announcement">INSPIRED BY AYURVEDA. ROOTED IN TRADITION. MADE FOR MODERN LIVING.</div>
   <header class="site-header">
     <nav class="main-nav">
@@ -74,10 +79,16 @@ p {
           <div class="nav-dropdown-menu">
             <a href="Morning-Ritual.html">Morning Ritual</a>
             <a href="Hair-Ritual.html">Hair Ritual</a>
-            <a href="under-construction.html">Bedtime Ritual</a>
+            <a href="Bedtime-ritual.html">Bedtime Ritual</a>
           </div>
         </details>
-        <a href="under-construction.html">STORIES</a>
+        <details class="nav-dropdown">
+          <summary>STORIES</summary>
+          <div class="nav-dropdown-menu nav-dropdown-menu-stories">
+            <a href="under-construction.html">Stories of Herbs and Healing Traditions</a>
+            <a href="under-construction.html">Ageless Tales, Timeless Wisdom</a>
+          </div>
+        </details>
         <a href="under-construction.html">ETHNIC GOODS</a>
       </div>
       <a class="logo-block" href="index.html">
@@ -109,5 +120,6 @@ p {
     <p class="site-disclaimer">Maya Mandala products and rituals are rooted in traditional wellness practices and are offered for educational 
         and self-care purposes only. These statements have not been evaluated by the Food and Drug Administration. Our products are not intended to diagnose, 
         treat, cure, or prevent any disease. Please consult a qualified healthcare professional for personalized medical guidance.</p>
+  <script src="assets/script.js"></script>
 </body>
 </html>
