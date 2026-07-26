@@ -1,29 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.products-toggle');
-  const menu = document.getElementById('productsMenu');
-
-  if (!toggle || !menu) return;
-
-  const closeMenu = () => {
-    menu.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+  const closeDropdown = (dropdown) => {
+    dropdown.removeAttribute('open');
   };
 
-  toggle.addEventListener('click', (event) => {
-    event.preventDefault();
-    const isOpen = menu.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener('toggle', () => {
+      if (!dropdown.open) return;
+
+      dropdowns.forEach((otherDropdown) => {
+        if (otherDropdown !== dropdown) closeDropdown(otherDropdown);
+      });
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      closeDropdown(dropdown);
+    });
   });
 
   document.addEventListener('click', (event) => {
-    if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-      closeMenu();
-    }
+    dropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(event.target)) closeDropdown(dropdown);
+    });
   });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      closeMenu();
+      dropdowns.forEach(closeDropdown);
     }
   });
 });
