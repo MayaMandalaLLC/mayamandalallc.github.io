@@ -79,6 +79,8 @@ a { color: inherit; text-decoration: none; }
   background: var(--cream);
   color: var(--green);
 }
+.nav-dropdown-menu-stories { min-width: min(330px, calc(100vw - 40px)); }
+.nav-dropdown-menu-stories a { white-space: normal; }
 .logo-block { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .logo-block img { width: 54px; height: 54px; object-fit: contain; }
 .logo-title { font-family: "Baskerville", "Baskerville Old Face", "Times New Roman", serif; font-size: 40px; letter-spacing: .06em; }
