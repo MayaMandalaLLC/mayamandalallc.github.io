@@ -46,8 +46,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
  gap: 20px;
 }
-.nav-group { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
-.home-page .nav-group { flex-wrap: nowrap; }
+.nav-group { display: flex; gap: 24px; flex-wrap: nowrap; align-items: center; }
 .nav-group:last-child { justify-content: flex-end; }
 .nav-group a,
 .nav-dropdown summary { font-size: 14px; letter-spacing: .08em; color: #4c453e; font-weight: 600; }
@@ -198,9 +197,9 @@ a { color: inherit; text-decoration: none; }
   .newsletter form { flex-direction: column; gap: 10px; }}
 
 @media (max-width: 480px) {
-  .home-page .nav-group { gap: 10px; }
-  .home-page .nav-group a,
-  .home-page .nav-dropdown summary { font-size: 12px; }
+  .nav-group { gap: 10px; }
+  .nav-group a,
+  .nav-dropdown summary { font-size: 12px; }
 }
 
 .dosha-quiz-page {
