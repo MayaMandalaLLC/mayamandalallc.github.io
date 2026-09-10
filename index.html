@@ -8,6 +8,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    (function (s, e, n, d, er) {
+      s['Sender'] = er;
+      s[er] = s[er] || function () {
+        (s[er].q = s[er].q || []).push(arguments)
+      }, s[er].l = 1 * new Date();
+      s[er].on = function(event, callback) {
+        s[er].listeners = s[er].listeners || {};
+        (s[er].listeners[event] = s[er].listeners[event] || []).push(callback);
+      };
+      var a = e.createElement(n),
+          m = e.getElementsByTagName(n)[0];
+      a.async = 1;
+      a.src = d;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+    sender('e5fc476a769666')
+  </script>
 </head>
 <body class="home-page">
   <div class="announcement">INSPIRED BY AYURVEDA. ROOTED IN TRADITION. MADE FOR MODERN LIVING.</div>
@@ -122,10 +140,7 @@
         <div>
           <p class="eyebrow">JOIN OUR JOURNEY</p>
           <p>Sign up for mindful notes, ritual ideas, and updates on new creations.</p>
-          <form>
-            <input type="email" placeholder="Your email address" aria-label="Email address" />
-            <button type="submit">SUBSCRIBE</button>
-          </form>
+          <div style="text-align: left" class="sender-form-field" data-sender-form-id="dyPjNV"></div>
         </div>
       </div>
   </section>
