@@ -260,6 +260,17 @@ a { color: inherit; text-decoration: none; }
 
 /* Stories of Herbs & Healing Traditions */
 .healing-stories-page { background: #fcf9f2; color: #2f2a24; }
+.healing-header { border-bottom-color: #eee8de; }
+.healing-header .main-nav { max-width: 1440px; min-height: 96px; padding: 14px 48px; grid-template-columns: 270px 1fr 120px; }
+.healing-brand { display: flex; align-items: center; gap: 10px; }
+.healing-brand img { width: 52px; height: 52px; object-fit: contain; }
+.healing-brand span { display: flex; flex-direction: column; align-items: center; }
+.healing-brand b { font: 500 23px/1.05 "Cormorant Garamond", serif; letter-spacing: .04em; white-space: nowrap; }
+.healing-brand small { margin-top: 4px; font-size: 9px; letter-spacing: .28em; color: #615c52; }
+.healing-nav-links { display: flex; justify-content: center; align-items: center; gap: clamp(20px, 2.5vw, 40px); }
+.healing-nav-links a { padding: 12px 0 9px; font: 500 15px "Cormorant Garamond", serif; white-space: nowrap; }
+.healing-nav-links .active { border-bottom: 1px solid #9a6f42; }
+.healing-nav-actions { display: flex; justify-content: flex-end; gap: 20px; font-size: 25px; }
 .healing-stories-page main { overflow: hidden; }
 .healing-stories-page h1, .healing-stories-page h2, .healing-stories-page h3 { color: #27241f; font-weight: 500; }
 .healing-hero { min-height: 520px; display: grid; grid-template-columns: 47% 53%; background: linear-gradient(100deg, #f7f1e5 0%, #eee5d3 100%); }
@@ -273,11 +284,11 @@ a { color: inherit; text-decoration: none; }
 .healing-placeholder { min-height: 145px; display: grid; align-content: center; justify-items: center; gap: 6px; padding: 15px; background: linear-gradient(145deg, #d9d0bb, #aeb599); color: #48533a; text-align: center; }
 .healing-placeholder span { padding: 5px 9px; border: 1px solid currentColor; border-radius: 3px; background: rgba(250,247,237,.72); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
 .healing-placeholder small { font-family: "Cormorant Garamond", serif; font-size: 18px; }
-.healing-hero-art { min-height: 520px; background: radial-gradient(circle at 55% 48%, rgba(255,255,255,.5), transparent 26%), linear-gradient(125deg, #ddd1b8, #8e9a70); }
+.healing-hero-art { min-height: 520px; background: url("MM Homepage Facial Ritual Image.png") center/cover no-repeat; }
 .healing-feature { padding-top: 32px; }
 .healing-label { margin: 0 0 10px 8px; color: #34342b; }
 .healing-feature article { display: grid; grid-template-columns: 54% 46%; min-height: 280px; overflow: hidden; border: 1px solid #d9cdbb; border-radius: 11px; background: #fffdf8; }
-.healing-feature-art { min-height: 280px; }
+.healing-feature-art { min-height: 280px; background: url("Homepage Stories Image.png") center 48%/cover no-repeat; }
 .healing-feature-copy { align-self: center; padding: 35px 50px; }
 .leaf-mark { color: #5f704b; font-size: 27px; }
 .healing-feature h2 { margin: 4px 0 7px; font-size: 36px; }
@@ -291,12 +302,26 @@ a { color: inherit; text-decoration: none; }
 .healing-card-grid-five { grid-template-columns: repeat(5, 1fr); }
 .healing-card-grid-four { grid-template-columns: repeat(4, 1fr); }
 .healing-card-grid article, .tradition-grid article { overflow: hidden; border: 1px solid #ded2c1; border-radius: 10px; background: #fffdf9; text-align: center; }
+.healing-card-image, .tradition-image { min-height: 145px; background-position: center; background-size: cover; }
+.healing-card-grid-five article:nth-child(1) .healing-card-image { background-image: url("MM Website Homepage Image  1.png"); }
+.healing-card-grid-five article:nth-child(2) .healing-card-image { background-image: url("Homepage Stories Image.png"); }
+.healing-card-grid-five article:nth-child(3) .healing-card-image { background-image: url("MM Homepage Facial Ritual Image.png"); }
+.healing-card-grid-five article:nth-child(4) .healing-card-image { background-image: url("Hair ritual page hero image.png"); }
+.healing-card-grid-five article:nth-child(5) .healing-card-image { background-image: url("MM Homepage Hair Ritual Image.png"); }
+.healing-card-grid-four article:nth-child(1) .healing-card-image { background-image: url("bedtime-products.png"); }
+.healing-card-grid-four article:nth-child(2) .healing-card-image { background-image: url("Maya Mandala front page pic - transparent HD.png"), linear-gradient(135deg, #8e6645, #d0ae83); }
+.healing-card-grid-four article:nth-child(3) .healing-card-image { background-image: url("Tongue cleaner usage.png"); }
+.healing-card-grid-four article:nth-child(4) .healing-card-image { background-image: url("Morning ritual page hero image.png"); }
 .healing-card-grid h3, .tradition-grid h3 { margin: 10px 8px 2px; font-size: 21px; }
 .healing-card-grid p, .tradition-grid p { margin: 0 8px 12px; font-family: "Cormorant Garamond", serif; font-size: 15px; line-height: 1.25; }
 .healing-traditions { padding-bottom: 28px; }
 .tradition-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .tradition-grid article { position: relative; padding-bottom: 8px; }
-.tradition-grid .healing-placeholder { min-height: 160px; }
+.tradition-image { min-height: 160px; }
+.tradition-grid article:nth-child(1) .tradition-image { background-image: url("MM Homepage Hair Ritual Image.png"); }
+.tradition-grid article:nth-child(2) .tradition-image { background-image: url("MM Website Homepage Image  1.png"); }
+.tradition-grid article:nth-child(3) .tradition-image { background-image: url("Hair ritual page hero image.png"); }
+.tradition-grid article:nth-child(4) .tradition-image { background-image: url("Homepage Stories Image.png"); }
 .tradition-icon { display: grid; width: 52px; height: 52px; margin: -27px auto 5px; position: relative; place-items: center; border: 2px solid #f6eddb; border-radius: 50%; background: #667451; color: white; font-size: 27px; }
 .tradition-grid h3 { font-size: 20px; }
 .healing-quote { margin: 0; padding: 35px 20px; background: linear-gradient(100deg, #ede3ce, #faf5e9, #e9dfca); text-align: center; }
@@ -311,6 +336,8 @@ a { color: inherit; text-decoration: none; }
 .source-grid h3 { margin: 4px 0 6px; font-size: 20px; }
 .source-grid p { max-width: 245px; margin: auto; font: 14px/1.35 "Cormorant Garamond", serif; }
 @media (max-width: 900px) {
+  .healing-header .main-nav { padding: 14px 22px; grid-template-columns: 1fr auto; }
+  .healing-nav-links { grid-column: 1 / -1; grid-row: 2; order: 3; gap: 22px; overflow-x: auto; justify-content: flex-start; width: 100%; }
   .healing-card-grid-five { grid-template-columns: repeat(3, 1fr); }
   .tradition-grid, .source-grid { grid-template-columns: repeat(2, 1fr); }
   .source-grid article:nth-child(2) { border-right: 0; }
@@ -324,6 +351,10 @@ a { color: inherit; text-decoration: none; }
   .healing-feature-copy { padding: 30px 25px; }
 }
 @media (max-width: 480px) {
+  .healing-header .main-nav { grid-template-columns: 1fr auto; }
+  .healing-brand b { font-size: 20px; }
+  .healing-brand img { width: 44px; height: 44px; }
+  .healing-nav-actions { gap: 12px; }
   .healing-hero h1 { font-size: 43px; }
   .healing-card-grid-five, .healing-card-grid-four, .tradition-grid, .source-grid { grid-template-columns: 1fr; }
   .source-grid article { border-right: 0; border-bottom: 1px solid #dfd4c3; }
